@@ -1,0 +1,17 @@
+{
+  "name": "leetcode",
+  "version": "1.0.2",
+  "description": "leetcode problems",
+  "main": "index.js",
+  "directories": {
+    "test": "__tests__"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}
