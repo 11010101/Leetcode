@@ -49,7 +49,6 @@ describe("Testing: removeElement function from 27.js", () => {
             const arr = [1,2,3]
             const arrClone = [1,2,3]
 
-
             removeElement(arr, 4)
 
             expect(arr).toEqual(arrClone)

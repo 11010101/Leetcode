@@ -1,9 +1,15 @@
+/*
+ALT 1
+    Sort val to end then directly set nums.length.
+ALT 2
+    Instead of reverse loop i-- inside if statement / while loop.
+ALT 3
+    Use new arr for operations (filter), then spread into old nums arr.
+*/
+
 const removeElement = (nums, val) => {
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i] === val) {
-            nums.splice(i, 1)
-            i--
-        }
+    for (let i = nums.length - 1; i >= 0; i--) {
+        if (nums[i] === val) nums.splice(i, 1)
     } 
     return nums.length
 }
@@ -11,22 +17,3 @@ const removeElement = (nums, val) => {
 module.exports = {
     removeElement
 }
-
-/*
-const arr = []
-for (let i = 0; i < 10000; i++) {
-    for (let j = 1; j < 10; j++) {
-        arr.push(j)
-    }
-}
-
-console.log(arr)
-
-start = Date.now()
-console.log("k:", removeElement(arr, 3))
-console.log("time:", Date.now() - start)
-*/
-
-const arr = [0,1,2,2,3,0,4,2]
-console.log(removeElement(arr, 2))
-console.log(arr)
