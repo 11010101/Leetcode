@@ -137,15 +137,56 @@ class BST {
          }
          this.root = removeNode(this.root, val)
     }
-    print() {
-        const printTree = (current) => {
-            console.log(`val: ${current.val}${current.left ? ", left: " + current.left.val : ""}${current.right ? ", right: " + current.right.val : ""}`)
+    Print() {
+        const queue = [ this.root ]
 
-            if (current.left) printTree(current.left)
-            if (current.right) printTree(current.right)
+        while (queue.length > 0) {
+            let levelSize = queue.length
+            const level = []
+
+            for (let i = 0; i < levelSize; i++) {
+                const currentNode = queue.shift()
+                //console.log("level:", level, "size:", levelSize, "value:", current.val)
+
+                level.push(currentNode.value)
+
+                if (current.left) {
+                    queue.push(currentNode.left)
+                }
+                if (current.right) {
+                    queue.push(currentNode.right)
+                }
+            }
+            console.log(level)
         }
-        printTree(this.root)
     }
+    init(arr) {
+        // Handle empty array.
+        if (!arr.length) return 
+    
+        const queue = []
+
+        // init 
+        this.root = new Node(arr[0])
+        queue.push(this.root)
+    
+        let index = 1
+        while (queue.length > 0) {
+          const currentNode = queue.shift()
+    
+          if (arr[index]) {
+            currentNode.left = new Node(arr[index])
+            queue.push(currentNode.left)
+          }
+          index++
+    
+          if (arr[index]) {
+            currentNode.right = new Node(arr[index])
+            queue.push(currentNode.right)
+          }
+          index++
+        }
+      }
 }
 
 module.exports = {
