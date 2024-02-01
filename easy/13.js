@@ -30,6 +30,7 @@ const romanToInt = (s) => {
     }
     return total
 }
-const s = "MCMXCIV"
 
-console.log(romanToInt(s))
+module.exports = {
+    romanToInt
+}
