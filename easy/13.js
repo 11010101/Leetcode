@@ -18,19 +18,18 @@ const romanToInt = (s) => {
 
     for (let i = 0; i < s.length; i++) {
         let numeral = s[i]
-        const nextNumeral = s[i + 1]
+        const doubleNumeral = `${numeral}${s[i + 1]}`
 
         // If numeral combind with next numeral is itself a numeral 
         // then combind them and ignore the next numeral
-        if (numerals[numeral + nextNumeral]) {
-            numeral += nextNumeral
+        if (numerals[doubleNumeral]) {
+            numeral = doubleNumeral
             i++
         }
         total += numerals[numeral]
     }
     return total
 }
-
 const s = "MCMXCIV"
 
 console.log(romanToInt(s))
