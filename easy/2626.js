@@ -9,9 +9,3 @@ const reduce = (nums, fn, init) => {
 
     return acc
 }
-
-const nums = [1, 2, 3, 4]
-const fn = (acc, cur) => acc + cur * cur
-const init = 100
-
-console.log(reduce(nums, fn, init))
