@@ -20,8 +20,6 @@ const addBinary = (a, b) => {
     }
 
     for (let i = a.length - 1; i >= 0; i--) {
-        const aBit = Number(a[i])
-        const bBit = Number(b[i])
         const sum = Number(a[i]) + Number(b[i]) + carry
 
         if (sum === 3) {
