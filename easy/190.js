@@ -22,6 +22,3 @@ const ex2 = 4294967293
 console.log( (ex2 >>> 0).toString(2) )
 
 console.log( (reverseBits(ex2) >>> 0).toString(2) )
-
-
-console.log(reverseBits(ex2))
