@@ -3,7 +3,7 @@
 */
 
 const isSubsequence = (s, t) => {
-    if (s.length === 0 || t.length === 0) {
+    if (t.length === 0) {
         return true
     }
     
