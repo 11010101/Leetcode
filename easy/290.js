@@ -24,8 +24,3 @@ const wordPattern = (pattern, s) => {
     }
     return true
 }
-
-const pattern = "abba"
-const s = "dog cat cat dog"
-
-console.log(wordPattern(pattern, s))
